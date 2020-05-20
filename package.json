@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -21,13 +23,21 @@
   },
   "homepage": "https://github.com/imarg3/devconnector#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.1",
     "express": "^4.17.1",
     "express-validator": "^6.4.1",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.26.0",
     "mongoose": "^5.9.13",
+    "react-moment": "^0.9.7",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "request": "^2.88.2"
   },
   "devDependencies": {
