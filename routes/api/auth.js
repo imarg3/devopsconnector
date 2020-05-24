@@ -9,7 +9,7 @@ const { check, validationResult } = require('express-validator');
 const User = require('../../models/User');
 
 // @route   GET api/auth
-// @desc    Test Route
+// @desc    Get user by token
 // @access  Public
 router.get('/', auth, async (req, res) => {
   try {
@@ -62,7 +62,7 @@ router.post(
       jwt.sign(
         payload,
         config.get('jwtSecret'),
-        { expiresIn: 3600 },
+        { expiresIn: 3600 }, // Time in seconds (1 hour)
         (err, token) => {
           if (err) throw err;
           res.json({ token });
