@@ -103,10 +103,10 @@ const ProfileSchema = new mongoose.Schema({
     instagram: {
       type: String,
     },
-    date: {
-      type: Date,
-      default: Date.now,
-    },
+  },
+  date: {
+    type: Date,
+    default: Date.now,
   },
 });
 
