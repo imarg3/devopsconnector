@@ -8,10 +8,16 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>Developers</Link>
+        <Link to='/profiles'>
+          <i className='fas fa-code' />{' '}
+          <span className='hide-sm'>Devopers</span>
+        </Link>
       </li>
       <li>
-        <Link to='/posts'>Posts</Link>
+        <Link to='/posts'>
+          <i className='fas fa-sticky-note' />{' '}
+          <span className='hide-sm'>Posts</span>
+        </Link>
       </li>
       <li>
         <Link to='/dashboard'>
@@ -20,7 +26,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         </Link>
       </li>
       <li>
-        <a onClick={logout} href='#!'>
+        <a onClick={logout} href='/login'>
           <i className='fas fa-sign-out-alt' />{' '}
           <span className='hide-sm'>Logout</span>
         </a>
@@ -31,7 +37,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <a href='/profiles'>Developers</a>
+        <a href='/profiles'>Devopers</a>
       </li>
       <li>
         <Link to='/register'>Register</Link>
@@ -46,7 +52,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className='navbar bg-dark'>
       <h1>
         <Link to='/'>
-          <i className='fas fa-code'></i> DevConnector
+          <i className='fas fa-laptop-code'></i> DevOps Connector
         </Link>
       </h1>
       {!loading && (
